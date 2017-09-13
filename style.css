@@ -1,0 +1,66 @@
+body{
+	margin:50px;
+/*	  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/background.jpg) no-repeat;
+  background-size: 100% 100%;
+  color:white;*/
+}
+#container{
+}
+.content{
+	display:flex;
+	text-align:center;
+	background-color:rgba(0,0,0,0.2);
+	margin-bottom:20px;
+	padding:10px;
+
+}
+#about > div {
+	display:inline;
+}
+.short{
+	width:30%;
+}
+.long{
+	width:70%;
+}
+.full{
+	width:100%;
+}
+#technologies img{
+	width:50px;
+	margin:0px 10px 0px 10px;
+}
+#projects img{
+	width:200px;
+	margin:0px 10px 0px 10px;
+}
+
+form{
+	margin-top:1em;
+}
+form > *{
+	display:block;
+	margin:0 auto;
+}
+#menu{
+	font-family: 'Josefin Sans', sans-serif;
+	position:absolute;
+	bottom:20px;
+	left:50%;
+	transform:translate(-50%);
+	font-size:19px;
+	letter-spacing: 1px;
+}
+#menu ul{
+	padding:0;
+	text-align:center;
+}
+#menu ul > *{
+	display:inline;
+	margin:0px 10px 0px 10px;
+	cursor:pointer;
+	opacity:0.7;
+}
+#menu ul >li:hover{
+	opacity:1;
+}
