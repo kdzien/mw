@@ -19,7 +19,6 @@ body {
     padding: 10px; }
   #container .short {
     width: 30%;
-    background-image: url(images/shadow.png);
     background-height: 100%; }
   #container .long {
     width: 70%; }
