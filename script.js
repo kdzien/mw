@@ -31,19 +31,23 @@ document.addEventListener("DOMContentLoaded", function(event){
 	var menuButton = document.getElementById("menu-button")
 	var menuOpen=false;
 	menuButton.addEventListener("click", function(event){
+		var menuElements = document.getElementById(this.dataset.show)
 		if(menuOpen==false){
-			document.getElementById(this.dataset.show).style.display="block"
+			menuElements.style.animationName="slideup"
 			menuOpen=true;
 		}else {
-			document.getElementById(this.dataset.show).style.display="none"
+			menuElements.style.animationName="slidedown"
 			menuOpen=false;
 		}
 	})
 })
 
-emailjs.send("gmail","template_3WfbauCe",{name: "James", notes: "Check this out!"})
-.then(function(response) {
-   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-}, function(err) {
-   console.log("FAILED. error=", err);
-});
+
+// EMAIL send - work, wait for rest  
+
+// emailjs.send("gmail","template_3WfbauCe",{name: "James", notes: "Check this out!"})
+// .then(function(response) {
+//    console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+// }, function(err) {
+//    console.log("FAILED. error=", err);
+// });
