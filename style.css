@@ -44,14 +44,16 @@ form > *{
 }
 #menu{
 	font-family: 'Josefin Sans', sans-serif;
-	position:absolute;
+	position:fixed;
 	bottom:20px;
 	left:50%;
 	transform:translate(-50%);
 	font-size:19px;
 	letter-spacing: 1px;
+	text-align:center;
 }
 #menu ul{
+	overflow:hidden;
 	padding:0;
 	text-align:center;
 }
@@ -63,4 +65,28 @@ form > *{
 }
 #menu ul >li:hover{
 	opacity:1;
+}
+#menu-button{
+	display:none;
+}
+/*MOBILE*/
+
+@media screen and (max-width:780px){
+	#menu ul{
+		display:none;
+	}
+	#menu-button{
+		cursor:pointer;
+		display:inline-block;
+	}
+}
+
+/*ANIMATION*/
+
+@keyframes slideup{
+	from {height:0px;
+	}
+	to {
+		height:auto;
+	}
 }

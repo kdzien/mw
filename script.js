@@ -27,4 +27,23 @@ document.addEventListener("DOMContentLoaded", function(event){
 			showDiv(this.dataset.class);
 		})
 	}
+
+	var menuButton = document.getElementById("menu-button")
+	var menuOpen=false;
+	menuButton.addEventListener("click", function(event){
+		if(menuOpen==false){
+			document.getElementById(this.dataset.show).style.display="block"
+			menuOpen=true;
+		}else {
+			document.getElementById(this.dataset.show).style.display="none"
+			menuOpen=false;
+		}
+	})
 })
+
+emailjs.send("gmail","template_3WfbauCe",{name: "James", notes: "Check this out!"})
+.then(function(response) {
+   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+}, function(err) {
+   console.log("FAILED. error=", err);
+});
