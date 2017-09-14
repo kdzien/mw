@@ -2,7 +2,8 @@ body {
   margin: 90px 0px 90px 0px;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/background.jpg) no-repeat;
   background-size: 100% 100%;
-  color: white; }
+  color: white;
+  font-family: 'Text Me One', sans-serif; }
 
 #container {
   width: 100%;
@@ -12,7 +13,9 @@ body {
   #container > * {
     width: 70%;
     margin: 0 auto;
-    height: 100%; }
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); }
   #container .content {
     display: flex;
     text-align: center;

@@ -3,6 +3,7 @@ body{
 background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/background.jpg) no-repeat;
   background-size: 100% 100%;
   color:white;
+  font-family: 'Text Me One', sans-serif;
 }
 #container{
 	width:100%;
@@ -12,7 +13,9 @@ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/
 	&>*{
 		width:70%;
 		margin:0 auto;
-		height:100%;
+		position:relative;
+		top:50%;
+		transform:translateY(-50%)
 	}
 	.content{
 	display:flex;
