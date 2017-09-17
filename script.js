@@ -15,9 +15,10 @@ var hideContentDivs = function(divsId){
 var showDiv = function(divId){
 	document.getElementById(divId).style.display="flex"
 }
+//trzeba dac w stylu display:none a nie przez jsa
 
 hideContentDivs(getDivsId(".content"));
-showDiv("about")
+showDiv("projects")
 
 document.addEventListener("DOMContentLoaded", function(event){
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
@@ -27,6 +28,24 @@ document.addEventListener("DOMContentLoaded", function(event){
 			showDiv(this.dataset.class);
 		})
 	}
+
+	//card filp
+
+	var cards = document.getElementsByClassName("card")
+	console.log(cards)
+
+	for (var i = 0; i <= cards.length-1; i++) {
+		console.log(cards[i])
+		cards[i].addEventListener("mouseenter", function(event){
+			console.log(cards[i])
+			this.classList.add("flipped");
+		})
+		cards[i].addEventListener("mouseleave",function(event){
+			this.classList.remove("flipped");
+		})
+	}	
+
+	//card flip
 
 	var menuButton = document.getElementById("menu-button")
 	var menuOpen=false;
