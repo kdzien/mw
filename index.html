@@ -23,14 +23,16 @@
 			</div>
 		</div>
 		<!--projekty-->
-		<div class="content" id="projects">
+		<div class="content center" id="projects">
 			<div class="project-container">
-				<div class="card">
+				<div class="card ">
 					<figure class="front" style="background:url(images/projects/easyshopping.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
-    					<div class="project-name">Easy Shopping</div>
-    					<div class="description">Aplikacja ułatwiająca tworzenie listy zakupów</div>
-    					<div class="project-type">Typ projektu: własny</div>
+    					<div style="position:fixed;top:50%;transform:translateY(-50%);">
+    						<div class="project-name">Easy Shopping</div>
+    						<div class="description">Aplikacja ułatwiająca tworzenie listy zakupów</div>
+    						<div class="project-type">Typ projektu: własny</div>
+    					</div>
     					<div class="url"><i class="material-icons">language</i></div>
     				</figure>
 				</div>
@@ -102,7 +104,11 @@
 					<div id="wrong-prompt">elo</div>
 					<label>Wiadomość</label>
 					<textarea rows="4" cols="50" maxlength="500" placeholder="min. 50 znaków"></textarea>
-					<button>Wyślij</button>			
+					<button>
+						<div id="send-text">Wyślij</div>
+						<div id="circle-of-death">
+						</div>
+					</button>			
 				</form>
 				<div>
 					

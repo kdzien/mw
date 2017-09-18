@@ -138,12 +138,67 @@ background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/
 
 
 form{
-	margin-top:1em;
-}
-form > *{
-	display:block;
 	margin:0 auto;
+	&>*{
+		display:block;
+		margin:0 auto;
+	}
+	input{
+		text-align:center;
+	}
+	input,textarea{
+		
+		width:70%;
+		margin-top:10px;
+		margin-bottom:10px;
+		padding:10px;
+		resize:none;
+		overflow:hidden;
+		background:rgba(0,0,0,0.5);
+		border:1px solid rgba(0,0,0,0);
+		color:white;
+		&:focus{
+		outline:none !important;
+		border-color:orange;
+		}
+	}
+	button{
+		width:50%;
+		margin:0 auto;
+		padding:10px;
+		background:none;
+		border:none;
+		color:white;
+		transition:0.4s;
+		&:hover{
+			background:rgba(0,0,0,0.5);
+			cursor:pointer;
+		}
+		&:focus{
+			outline:none !important;
+		}
+	}
 }
+#cntc-info{
+  div{
+     margin-bottom:5px;
+  }
+}
+#contactico {
+	a{
+		i{  
+			font-size:40px;
+			margin-left:10px;
+			color:orange;
+			transition:0.5s;
+			&:hover{
+				transform:scale(1.5);
+			}
+		}
+		
+	}
+}
+
 /*MOBILE*/
 
 @media screen and (max-width:780px){
@@ -198,4 +253,47 @@ form > *{
 	to{
 		height:0px;
 	}
+}
+@keyframes rotate{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+
+//small classes 
+.same-line{
+  position:relative;
+  bottom:6px;
+  margin-left:5px;
+}
+.correct{
+  border:solid 1px #45db00;
+}
+.wrong{
+  border:solid 1px #db0000;
+}
+.center{
+  margin:0 auto;
+}
+.cntc{
+  width:70%;
+}
+#wrong-prompt{
+  display:none;
+}
+#circle-of-death{
+	display:none;
+	width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    border:2px solid orange;
+    border-top:2px solid rgba(0,0,0,0);
+    border-radius:50%;
+    animation:rotate 1.5s linear infinite;
+}
+#send-text{
+	display:block;
 }
