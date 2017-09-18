@@ -15,10 +15,25 @@ var hideContentDivs = function(divsId){
 var showDiv = function(divId){
 	document.getElementById(divId).style.display="flex"
 }
+var checkInput = function(element,regexp,promptElement){
+	element.addEventListener("focusout",function(event){
+		if(this.value==""){
+			return;
+		}
+		else if(regexp.test(this.value)==true){
+			console.log(this.value)
+			this.classList.add("correct");
+		}else{
+			console.log(this.value)
+			this.classList.add("wrong");
+			promptElement.style.display="block";
+		}
+	})
+}
 //trzeba dac w stylu display:none a nie przez jsa
 
 hideContentDivs(getDivsId(".content"));
-showDiv("projects")
+showDiv("contact")
 
 document.addEventListener("DOMContentLoaded", function(event){
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
@@ -32,12 +47,9 @@ document.addEventListener("DOMContentLoaded", function(event){
 	//card filp
 
 	var cards = document.getElementsByClassName("card")
-	console.log(cards)
 
 	for (var i = 0; i <= cards.length-1; i++) {
-		console.log(cards[i])
 		cards[i].addEventListener("mouseenter", function(event){
-			console.log(cards[i])
 			this.classList.add("flipped");
 		})
 		cards[i].addEventListener("mouseleave",function(event){
@@ -46,6 +58,26 @@ document.addEventListener("DOMContentLoaded", function(event){
 	}	
 
 	//card flip
+
+	//form//
+	var form = document.getElementsByTagName("form")[0];
+	var emailInput=form[1];
+	var nameInput=form[0];
+	var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+	var nameRegExp=/^[a-zA-Z]{3,25}$/
+	var emailPrompt = document.getElementById("wrong-prompt");
+	emailInput.addEventListener("focus",function(event){
+		this.classList.remove("correct","wrong")
+		emailPrompt.style.display="none";
+	})
+	nameInput.addEventListener("focus",function(event){
+		this.classList.remove("correct","wrong")
+		emailPrompt.style.display="none";
+	})
+	checkInput(emailInput,emailRegExp,emailPrompt);
+	checkInput(nameInput,nameRegExp);
+
+	//form//
 
 	var menuButton = document.getElementById("menu-button")
 	var menuOpen=false;

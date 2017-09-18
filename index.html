@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
-
+<script src="https://use.fontawesome.com/22ab09c0fb.js"></script>
 </head>
 
 <body>
@@ -18,10 +18,7 @@
 				&nbsp;
 			</div>
 			<div class="right long">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+				<strong>Obecnie jestem studentem 3-go roku Informatyki na Politechnice Wrocławskiej.</strong><br> Moja przygoda z tworzeniem stron zaczęła się rok temu przy okazji projektu zespołowego na uczelni. Przy tym projekcie zdecydowałem, że chcę się tym zajmować zawodowo. Cały czas się rozwijam, wykorzystując zdobytą wiedzę i ucząc się nowych technologii. Na koncie mam kilka własnych projektów przedstawionych poniżej.
 
 			</div>
 		</div>
@@ -29,7 +26,7 @@
 		<div class="content" id="projects">
 			<div class="project-container">
 				<div class="card">
-					<figure class="front" style="background:url(images/projects/easyshopping.png) no-repeat 100%"></figure>
+					<figure class="front" style="background:url(images/projects/easyshopping.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="project-name">Easy Shopping</div>
     					<div class="description">Aplikacja ułatwiająca tworzenie listy zakupów</div>
@@ -38,7 +35,7 @@
     				</figure>
 				</div>
 				<div class="card" style="margin-left:105%">
-					<figure class="front" style="background:url(images/projects/eat24.png) no-repeat 100%"></figure>
+					<figure class="front" style="background:url(images/projects/eat24.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="project-name">Eat With Me</div>
     					<div class="description">Aplikacja umożliwiająca wspólne zamawianie posiłków</div>
@@ -47,7 +44,7 @@
     				</figure>
 				</div>
 				<div class="card" style="margin-left:210%">
-					<figure class="front" style="background:url(images/projects/hangmeout.png) no-repeat 100%"></figure>
+					<figure class="front" style="background:url(images/projects/hangmeout.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="project-name">HangMeOut</div>
     					<div class="description">Gra w wisielca</div>
@@ -83,10 +80,28 @@
 		</div>
 		<!--contact-->
 		<div class="content" id="contact">
-			<div class="center full">
+			<div class="center cntc">
+				<div id="cntc-info">
+					<div style="font-size:20px">Konrad Dzień</div>
+					<div ><i class="material-icons">mail_outline</i><span class="same-line" >dzien.konrad@gmail.com</span></div>
+					<div ><i class="material-icons">phone</i><span class="same-line" >533 830 555</span></div>
+					<div >
+						<span id="contactico">
+							<a href="https://pl.linkedin.com/in/dzienkonrad"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+							<a href="https://www.facebook.com/dzieniu"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+							<a href="https://www.github.com/Dzieniu"><i class="fa fa-github" aria-hidden="true"></i></a>
+						</span>
+					</div>
+				</div>
 				<form>
-					<input></input>
-					<input></input>
+					<label>Imię</label>
+					<input  placeholder="od 3 do 25 znaków"></input>
+
+					<label>Twój e-mail</label>
+					<input type="email"></input>
+					<div id="wrong-prompt">elo</div>
+					<label>Wiadomość</label>
+					<textarea rows="4" cols="50" maxlength="500" placeholder="min. 50 znaków"></textarea>
 					<button>Wyślij</button>			
 				</form>
 				<div>

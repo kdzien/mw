@@ -146,5 +146,86 @@ form > * {
     height: 124px; }
   to {
     height: 0px; } }
-
+@keyframes rotate{
+  0%{
+     transform: rotateY(0deg);
+  }
+  50%{
+     transform: rotateY(180deg);
+  } 
+  100%{
+     transform: rotateY(0deg);
+  }
+}
 /*# sourceMappingURL=style.css.map */
+
+/*form*/
+.center{
+  margin:0 auto;
+}
+.cntc{
+  width:70%;
+}
+form{
+  margin:0 auto;
+}
+form input{
+  text-align:center;
+}
+form input,textarea{
+  width:70%;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding:10px;
+  resize:none;
+  overflow:hidden;
+  background:rgba(0,0,0,0.5);
+  border:gray;
+  color:white;
+}
+form input:focus,textarea:focus{
+  outline:none !important;
+  border:1px solid orange;
+
+}
+form button{
+  width:50%;
+  margin:0 auto;
+  padding:10px;
+  background:none;
+  border:none;
+  color:white;
+  transition:0.4s;
+}
+
+form button:hover{
+  background:rgba(0,0,0,0.5);
+  cursor:pointer;
+}
+
+#contactico a > i{
+  font-size:40px;
+  margin-left:10px;
+  color:orange;
+  transition:0.5s;
+}
+#contactico a >i:hover{
+  transform:scale(1.5);
+}
+#cntc-info > div{
+  margin-bottom:5px;
+}
+.same-line{
+  position:relative;
+  bottom:6px;
+  margin-left:5px;
+}
+.correct{
+  border:solid 1px #45db00;
+}
+.wrong{
+  border:solid 1px #db0000;
+}
+#wrong-prompt{
+  display:none;
+}
