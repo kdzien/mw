@@ -33,7 +33,7 @@ var checkInput = function(element,regexp,promptElement){
 //trzeba dac w stylu display:none a nie przez jsa
 
 hideContentDivs(getDivsId(".content"));
-showDiv("contact")
+showDiv("technologies")
 
 document.addEventListener("DOMContentLoaded", function(event){
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 	//form//
 
+	//menu//
 	var menuButton = document.getElementById("menu-button")
 	var menuOpen=false;
 	menuButton.addEventListener("click", function(event){
@@ -92,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 		}
 	})
 })
-
+	//menu//
 
 // EMAIL send - work, wait for rest  
 
