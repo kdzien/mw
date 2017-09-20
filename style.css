@@ -314,4 +314,7 @@ form {
 #send-text {
   display: block; }
 
+.separate{
+  border-left:1px solid white;
+}
 /*# sourceMappingURL=style.css.map */

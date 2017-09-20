@@ -33,7 +33,7 @@ var checkInput = function(element,regexp,promptElement){
 //trzeba dac w stylu display:none a nie przez jsa
 
 hideContentDivs(getDivsId(".content"));
-showDiv("technologies")
+showDiv("contact")
 
 document.addEventListener("DOMContentLoaded", function(event){
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
