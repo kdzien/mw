@@ -1,5 +1,6 @@
 body {
-  margin: 90px 0px 90px 0px;
+  margin: 0 auto;
+  padding: 90px 0px 90px 0px;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(images/background.jpg) no-repeat;
   background-size: 100% 100%;
   color: white;
@@ -10,16 +11,15 @@ body {
   height: 100%;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.2); }
-  #container > * {
+  #container .content {
+    display: flex;
+    text-align: center;
+    padding: 10px;
     width: 70%;
     margin: 0 auto;
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
-  #container .content {
-    display: flex;
-    text-align: center;
-    padding: 10px; }
   #container .short {
     width: 30%;
     background-height: 100%; }
@@ -229,9 +229,11 @@ form {
 .img-cover {
   height: 100%; }
 
-.title {
-  font-size: 26px;
-  margin-bottom: 20px; }
+#title {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-size: 32px; }
 
 .tools-style {
   background-color: #64B5F6 !important; }
@@ -314,7 +316,4 @@ form {
 #send-text {
   display: block; }
 
-.separate{
-  border-left:1px solid white;
-}
 /*# sourceMappingURL=style.css.map */
