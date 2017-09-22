@@ -19,7 +19,12 @@ body {
     margin: 0 auto;
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%); 
+    overflow:hidden;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+
+  }
   #container .short {
     width: 30%;
     background-height: 100%; }
@@ -51,7 +56,6 @@ body {
         background: red; }
       #container #projects .project-container .card .back {
         transform: rotateY(180deg);
-        border: solid gray 1px;
         background-color: rgba(0, 0, 0, 0.5); }
         #container #projects .project-container .card .back .descc {
           width: 90%;
@@ -229,11 +233,17 @@ form {
 .img-cover {
   height: 100%; }
 
-#title {
+.title {
   position: absolute;
   top: 40px;
   left: 20px;
-  font-size: 32px; }
+  font-size: 32px; 
+  overflow:hidden;
+}
+.title-animation{
+    animation-duration: 1s;
+  animation-fill-mode: forwards
+}
 
 .tools-style {
   background-color: #64B5F6 !important; }
@@ -243,6 +253,8 @@ form {
 
 .tech-style-font {
   color: #FFC107; }
+
+
 
 /*MOBILE*/
 @media screen and (max-width: 780px) {
@@ -286,6 +298,33 @@ form {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+@keyframes showCnt{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+@keyframes showCnt{
+  from{
+    opacity:0;
+    transform:translate(-40%,-50%);
+  }
+  to{
+    opacity:1;
+    transform:translate(0,-50%);
+  }
+}
+@keyframes slideLeft{
+  from{
+    width:19px;
+  }
+  to {
+    width:500px;
+  }
+}
+
 .same-line {
   position: relative;
   bottom: 6px;
@@ -315,5 +354,14 @@ form {
 
 #send-text {
   display: block; }
+
+.tools-style-border {
+  border-top: solid 1px #64B5F6; }
+
+.tech-style-border {
+  border-top: solid 1px #FFC107; }
+
+#tech-title{
+}
 
 /*# sourceMappingURL=style.css.map */

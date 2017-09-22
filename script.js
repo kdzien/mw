@@ -1,5 +1,6 @@
-var getDivsId = function(className){
+var getChildrenById = function(className){
 	var parent = document.querySelectorAll(className);
+
 	var contentDivsIds= [];
 	for (var i=0;i<=parent.length-1;i++){
 		var current = parent[i].id;
@@ -7,13 +8,29 @@ var getDivsId = function(className){
 	}
 	return contentDivsIds;
 }
+var getDivChildren = function(className){
+	var parent = document.querySelector(className);
+	var current = [];
+	for (var i=0;i<=parent.children.length-1;i++){
+		current.push(parent.children[i].id)
+	}
+	return current
+}
+
 var hideContentDivs = function(divsId){
 	for(var i=0;i<=divsId.length-1;i++){
 		document.getElementById(divsId[i]).style.display="none";
+
 	}
 }
-var showDiv = function(divId){
-	document.getElementById(divId).style.display="flex"
+
+var showDiv = function(divId,ending){
+	document.getElementById(divId+ending).style.display="flex"
+	if(ending=="-title"){
+		document.getElementById(divId+ending).style.animationName="slideLeft"
+		return;
+	}
+	document.getElementById(divId+ending).style.animationName="showCnt"
 }
 var checkInput = function(element,regexp,promptElement){
 	element.addEventListener("focusout",function(event){
@@ -30,20 +47,47 @@ var checkInput = function(element,regexp,promptElement){
 		}
 	})
 }
+
+//polygons
+var polygons = document.querySelectorAll('.hex');
+var tech_title = document.getElementById("tech-title")
+for (var i =0;i<=polygons.length-1;i++){
+	polygons[i].addEventListener("mouseenter",function(event){
+		tech_title.innerHTML=this.dataset.tech
+	})
+	polygons[i].addEventListener("mouseleave",function(event){
+		tech_title.innerHTML="&nbsp;"
+	})
+}
+//
 //trzeba dac w stylu display:none a nie przez jsa
 
-hideContentDivs(getDivsId(".content"));
-showDiv("contact")
+hideContentDivs(getChildrenById(".content"));
+hideContentDivs(getDivChildren(".title"));
+showDiv("contact","")
+showDiv("contact","-title")
+
 
 document.addEventListener("DOMContentLoaded", function(event){
+	//content
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
+	var titleElements = document.querySelector('.title').children;
 	for (var i = 0; i <= menuItems.length-1; i++) {
 		menuItems[i].addEventListener("click", function(event){
-			hideContentDivs(getDivsId(".content"));
-			showDiv(this.dataset.class);
+			hideContentDivs(getChildrenById(".content"));
+			hideContentDivs(getDivChildren(".title"));
+			showDiv(this.dataset.class,"");
+			showDiv(this.dataset.class,"-title")
+			for(var i =0; i<=titleElements.length-1;i++){
+				if(titleElements[i].dataset.class==this.dataset.class){
+					titleElements[i].style.display="block";	
+					console.log(titleElements[i])
+				}
+			}
+			
 		})
 	}
-
+	//content
 	//card filp
 
 	var cards = document.getElementsByClassName("card")
@@ -80,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 	//form//
 
 	//menu//
-	var menuButton = document.getElementById("menu-button")
+	var menuButton = document.getElementById("menu-button");
 	var menuOpen=false;
 	menuButton.addEventListener("click", function(event){
 		var menuElements = document.getElementById(this.dataset.show)

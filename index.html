@@ -10,8 +10,11 @@
 </head>
 
 <body>
-	<div id="title">
-		<div ><span class="tech-style-font">O</span><span class="tools-style-font">MNIE</span></div>
+	<div class="title">
+		<div id="about-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">O_MNIE</span></div>
+		<div id="projects-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">MOJE_PROJEKTY</span></div>
+		<div id="technologies-title" class="title-animation"><span class="tools-style-font">#</span><span class="tech-style-font">TECHNOLOGIE</span>&nbsp;|&nbsp;<span class="tools-style-font">NARZEDZIA</span></div>
+		<div id="contact-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">KONTAKT</span></div>
 	</div>
 	<div id="container">
 		<!--o mnie-->
@@ -27,7 +30,7 @@
 		<!--projekty-->
 		<div class="content" id="projects">
 			<div class="project-container">
-				<div class="card">
+				<div class="card tech-style-border">
 					<figure class="front" style="background:url(images/projects/easyshopping.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="descc">
@@ -39,7 +42,9 @@
     				</figure>
     					
 				</div>
-				<div class="card" style="margin-left:105%">
+			</div>
+			<div class="project-container">
+				<div class="card tools-style-border">
 					<figure class="front" style="background:url(images/projects/eat24.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="descc">
@@ -51,7 +56,9 @@
     				</figure>
     					
 				</div>
-				<div class="card" style="margin-left:210%">
+			</div>
+			<div class="project-container">
+				<div class="card tech-style-border">
 					<figure class="front" style="background:url(images/projects/hangmeout.png) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="descc">
@@ -61,7 +68,7 @@
     					</div>
     					<div class="url"><i class="material-icons">language</i></div>
     				</figure>
-    				
+    					
 				</div>
 			</div>
 		</div>
@@ -70,63 +77,64 @@
 			<div class="center full">
 <div class="container-flex">
 	<div class="row3">
-		<div class="hex">	
+		<div class="hex" data-tech="html">	
 			<img class="img-cover" src="images/technologies/html.png" />	
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex" style="">	
+		<div class="hex" data-tech="css">	
 			<img class="img-cover" src="images/technologies/css.png" />	
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex" style="">	
+		<div class="hex" data-tech="JavaScript">	
 			<img class="img-cover" src="images/technologies/js.png" />	
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
 	</div>
 	<div class="row2">
-		<div class="hex tools-style near-margin" style="">
+		<div class="hex tools-style near-margin" data-tech="Git">
 			<img class="img-cover" src="images/tools/git.png" />
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex  near-margin" style="">
+		<div class="hex  near-margin" data-tech="AngularJS">
 			<img class="img-cover" src="images/technologies/angular.png" />	
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex near-margin" style="">	
+		<div class="hex near-margin" data-tech="Bootstrap">	
 			<img class="img-cover" src="images/technologies/bootstrap.png" />	
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex tools-style near-margin" style="">
+		<div class="hex tools-style near-margin" data-tech="Sublime">
 			<img class="img-cover" src="images/tools/sublime.png" />
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
 	</div>
 	<div class="row1">
-		<div class="hex tools-style near-margin" style="">
+		<div class="hex tools-style near-margin" data-tech="Ubuntu">
 			<img class="img-cover" src="images/tools/ubuntu.png" />
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex  near-margin" style="">	
+		<div class="hex  near-margin" data-tech="Sass">	
 			<img class="img-cover" src="images/technologies/sass.png" />	
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
-		<div class="hex tools-style near-margin" style="">
+		<div class="hex tools-style near-margin" data-tech="gimp">
 			<img class="img-cover" src="images/tools/gimp.png" />
 			<div class="corner-1"></div>
 			<div class="corner-2"></div>		
 		</div>
 	</div>
-</div>
 
+</div>
+<div id="tech-title">&nbsp;</div>
 			</div>
 		</div>
 		<!--contact-->
