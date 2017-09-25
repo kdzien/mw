@@ -64,8 +64,8 @@ for (var i =0;i<=polygons.length-1;i++){
 
 hideContentDivs(getChildrenById(".content"));
 hideContentDivs(getDivChildren(".title"));
-showDiv("contact","")
-showDiv("contact","-title")
+showDiv("projects","")
+showDiv("projects","-title")
 
 
 document.addEventListener("DOMContentLoaded", function(event){
