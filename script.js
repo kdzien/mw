@@ -32,21 +32,18 @@ var showDiv = function(divId,ending){
 	}
 	document.getElementById(divId+ending).style.animationName="showCnt"
 }
-var checkInput = function(element,regexp,promptElement){
-	element.addEventListener("focusout",function(event){
-		if(this.value==""){
-			return;
+var checkInput = function(element,regexp){
+		if(element.value==""){
+			return false;
 		}
-		else if(regexp.test(this.value)==true){
-			console.log(this.value)
-			this.classList.add("correct");
+		else if(regexp.test(element.value)==true){
+			return true;
 		}else{
-			console.log(this.value)
-			this.classList.add("wrong");
-			promptElement.style.display="block";
+			return false;
 		}
-	})
 }
+
+
 
 //polygons
 var polygons = document.querySelectorAll('.hex');
@@ -107,20 +104,22 @@ document.addEventListener("DOMContentLoaded", function(event){
 	var form = document.getElementsByTagName("form")[0];
 	var emailInput=form[1];
 	var nameInput=form[0];
+	var messageInput=form[2];
 	var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 	var nameRegExp=/^[a-zA-Z]{3,25}$/
-	var emailPrompt = document.getElementById("wrong-prompt");
-	emailInput.addEventListener("focus",function(event){
-		this.classList.remove("correct","wrong")
-		emailPrompt.style.display="none";
-	})
-	nameInput.addEventListener("focus",function(event){
-		this.classList.remove("correct","wrong")
-		emailPrompt.style.display="none";
-	})
-	checkInput(emailInput,emailRegExp,emailPrompt);
-	checkInput(nameInput,nameRegExp);
+	var textRegExp=/^[a-zA-Z]{50,}$/
 
+
+	formValidation = function(){
+		var email = checkInput(emailInput,emailRegExp);
+		var name = checkInput(nameInput,nameRegExp);
+		var message = checkInput(messageInput,textRegExp);
+		if(message==true){
+			console.log("true")
+		}else{
+			console.log("false")
+		}
+	}
 	//form//
 
 	//menu//
