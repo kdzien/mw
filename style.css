@@ -234,7 +234,7 @@ form {
   height: 100%; }
 
 .title {
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 20px;
   font-size: 32px; 

@@ -136,6 +136,17 @@ document.addEventListener("DOMContentLoaded", function(event){
 		}
 	})
 })
+
+var showContent = document.getElementById("showContent");
+var welcome_title = document.getElementById("welcome-title")
+showContent.addEventListener("click", function(event){
+	var welcomeDiv=document.getElementById("welcome")
+	welcomeDiv.style.animation="hideLeft 1.5s cubic-bezier(0.94, 0.04, 0, 1.26) forwards"
+})
+setTimeout(function(){
+	showContent.style.opacity="1"
+},2500)
+
 	//menu//
 
 // EMAIL send - work, wait for rest  
