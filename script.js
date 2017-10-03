@@ -61,16 +61,21 @@ for (var i =0;i<=polygons.length-1;i++){
 
 hideContentDivs(getChildrenById(".content"));
 hideContentDivs(getDivChildren(".title"));
-showDiv("projects","")
-showDiv("projects","-title")
+showDiv("about","")
+showDiv("about","-title")
 
 
 document.addEventListener("DOMContentLoaded", function(event){
 	//content
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
+
 	var titleElements = document.querySelector('.title').children;
 	for (var i = 0; i <= menuItems.length-1; i++) {
 		menuItems[i].addEventListener("click", function(event){
+			for (var i = 0; i <= menuItems.length-1; i++) {
+				menuItems[i].classList.remove("menu-opacity");
+			}
+			this.classList.add("menu-opacity");
 			hideContentDivs(getChildrenById(".content"));
 			hideContentDivs(getDivChildren(".title"));
 			showDiv(this.dataset.class,"");

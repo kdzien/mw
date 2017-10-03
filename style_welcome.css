@@ -1,9 +1,11 @@
-body{
-	padding:0;
-}
 #main{
 }
 #welcome {
+	font-family: 'Lato', sans-serif;
+	background:url("images/background.png");
+	background-size:100% 100%;
+	position:absolute;
+	top:0;
 	overflow:hidden;
 	position:absolute;
 	right:0;
@@ -27,7 +29,7 @@ body{
 	border-bottom:1px solid black;
 	padding:5px 20px 5px 20px;
 	margin-bottom:10px;
-	animation:godown 1s cubic-bezier(0, 0, 0, 1.26) forwards;
+	animation:godown 1s ease-in-out forwards;
 }
 #welcome-name span{
 	font-weight: bold;
@@ -35,15 +37,13 @@ body{
 #welcome-title{
 	opacity:0;
 	font-size:25px;
-	animation:godown 1s cubic-bezier(0, 0, 0, 1.26) forwards;
+	animation:godown 1s ease-in-out forwards;
 	animation-delay: 1s;
 }
 #showContent{
+	animation:blink 1.5s infinite;
 	opacity:0;
-	animation:blink 1.5s infinite ease-in ;
 	font-size:42px;
-	border:solid 2px black ;
-	border-radius:50%;
     position: absolute;
     left: 50%;
     bottom: 5%;
@@ -63,17 +63,7 @@ body{
 		transform:scale(1);
 	}
 }
-@keyframes blink {
-	0%{
-		transform:translateX(-50%) scale(1);
-	}
-	50%{
-		transform:translateX(-50%) scale(1.3);
-	}
-	100%{
-		transform:translateX(-50%) scale(1);
-	}
-}
+
 @keyframes hideLeft {
 	from{
 		height:100%;
@@ -81,4 +71,12 @@ body{
 		height:0%;
 	}	
 
+}
+@keyframes blink {
+	from{
+		transform:scale(1)
+	}
+	to{
+		transform:scale(2);
+	}
 }
