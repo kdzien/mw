@@ -75,6 +75,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 	var menuElements = document.getElementById("menu-items");
 	//content
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
+	menuItems[0].classList.add("menu-opacity");
 	var menuOpen=false;
 	var titleElements = document.querySelector('.title').children;
 	for (var i = 0; i <= menuItems.length-1; i++) {
@@ -131,12 +132,46 @@ document.addEventListener("DOMContentLoaded", function(event){
 		var email = checkInput(emailInput,emailRegExp);
 		var name = checkInput(nameInput,nameRegExp);
 		var message = checkInput(messageInput,textRegExp);
-		if(message==true){
-			console.log("true")
-		}else{
-			console.log("false")
-		}
+		if(message==true && email==true && name==true){
+			sendEmail(nameInput.value,messageInput.value,emailInput.value)
+		}else{	}
 	}
+	//formValidatonStyle
+	var formElements = [
+	{name:emailInput,regxp:emailRegExp},{name:nameInput,regxp:nameRegExp},{name:messageInput,regxp:textRegExp}
+	]
+	
+	nameInput.addEventListener("focusout", function(event){
+		if(this.value==""){nameInput.classList.remove("wrong","correct")}
+		else if(nameRegExp.test(this.value)==true){
+			nameInput.classList.remove("wrong");
+			nameInput.classList.add("correct");
+		}else {
+			nameInput.classList.remove("correct");
+			nameInput.classList.add("wrong");
+		}
+	})
+	emailInput.addEventListener("focusout", function(event){
+		if(this.value==""){emailInput.classList.remove("wrong","correct")}
+		else if(emailRegExp.test(this.value)==true){
+			emailInput.classList.remove("wrong");
+			emailInput.classList.add("correct");
+		}else {
+			emailInput.classList.remove("correct");
+			emailInput.classList.add("wrong");
+		}
+	})
+	messageInput.addEventListener("focusout", function(event){
+		if(this.value==""){messageInput.classList.remove("wrong","correct")}
+		else if(textRegExp.test(this.value)==true){
+			messageInput.classList.remove("wrong");
+			messageInput.classList.add("correct");
+		}else {
+			messageInput.classList.remove("correct");
+			messageInput.classList.add("wrong");
+		}
+	})
+
 	//form//
 
 	//menu//
@@ -165,10 +200,11 @@ setTimeout(function(){
 	//menu//
 
 // EMAIL send - work, wait for rest  
-
-// emailjs.send("gmail","template_3WfbauCe",{name: "James", notes: "Check this out!"})
-// .then(function(response) {
-//    console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-// }, function(err) {
-//    console.log("FAILED. error=", err);
-// });
+sendEmail = function(nm,text,email){
+emailjs.send("gmail","template_3WfbauCe",{name: nm, notes: text+email})
+.then(function(response) {
+   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+}, function(err) {
+   console.log("FAILED. error=", err);
+});	
+}
