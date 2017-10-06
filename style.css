@@ -37,8 +37,9 @@ body {
     font-size:17px;
     display: inline; }
   #container #projects .project-container {
-    width: 30%;
-    height: 90%;
+    width: 25%;
+    height: 70%;
+    margin:0 auto;
     position: relative;
     perspective: 3000px; }
     #container #projects .project-container .card {
@@ -266,10 +267,45 @@ form {
 
 /*MOBILE*/
 @media screen and (max-width: 780px) {
+
+#container .short{
+  width:100% !important;
+}
+#container .long{
+  width:100% !important;
+}
+#cntc-info{
+  position:initial;
+  transform:none;
+}
+
+#technologies{
+  width:auto !important; 
+}
+.container-flex{
+  margin:0;
+}
+.row3, .row1{
+  margin-left:40px;
+}
+.row2{
+  margin-left:10px;
+}
+.hex{
+    width: 50px;
+    height: 28px;
+}
+
+
   #menu {
     width: 100%; 
     font-size:19px;
-    bottom:20px;}
+    bottom:0px;
+    }
+    #menu i{
+      padding:4px;
+      color:#FFC107;
+    }
     #menu #menu-items {
       margin: 0;
       display: block;
@@ -280,7 +316,8 @@ form {
     #menu ul {
       display: none; }
       #menu ul li {
-        background-color: gray;
+        opacity:1;
+        background-color: rgba(0,0,0,0.6);
         margin: 0px;
         margin-bottom: 1px;
         padding: 5px 0px 5px 0px;
@@ -291,16 +328,50 @@ form {
           margin-bottom: 0px; }
     #menu #menu-button {
       cursor: pointer;
-      display: inline-block; } }
+      display: inline-block; } 
+
+#container{
+  height:auto;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+#container .content{
+  transform:none;
+
+}
+.title{
+  position:absolute;
+  width:220px;
+}
+  #container #projects .project-container {
+    width: 100%;
+    height:80%;
+    margin:none;
+        margin:none;
+    margin-top:15px;
+    margin-bottom:15px;}
+    .card-margin{
+
+    }
+
+@keyframes slideLeft{
+  from{
+    width:19px;
+  }
+  to {
+    width:220px;
+  }
+}
+    }
 /*ANIMATION*/
 @keyframes slideup {
   from {
     height: 0px; }
   to {
-    height: 124px; } }
+    height: 136px; } }
 @keyframes slidedown {
   from {
-    height: 124px; }
+    height: 136px; }
   to {
     height: 0px; } }
 @keyframes rotate {
@@ -380,11 +451,7 @@ transition: border 1s;
 
 #tech-title{
 }
-.card-margin{
-  margin:0 auto;
-  height:70% !important;
-  width:25% !important;
-}
+
 
 body::-webkit-scrollbar {
     width: 1em;

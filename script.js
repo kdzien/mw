@@ -25,7 +25,12 @@ var hideContentDivs = function(divsId){
 }
 
 var showDiv = function(divId,ending){
-	document.getElementById(divId+ending).style.display="flex"
+	if(window.innerWidth<780){
+		document.getElementById(divId+ending).style.display="block"
+	}else {
+		document.getElementById(divId+ending).style.display="flex"
+	}
+	
 	if(ending=="-title"){
 		document.getElementById(divId+ending).style.animationName="slideLeft"
 		return;
@@ -61,14 +66,16 @@ for (var i =0;i<=polygons.length-1;i++){
 
 hideContentDivs(getChildrenById(".content"));
 hideContentDivs(getDivChildren(".title"));
-showDiv("about","")
-showDiv("about","-title")
+showDiv("contact","")
+showDiv("contact","-title")
 
 
 document.addEventListener("DOMContentLoaded", function(event){
+
+	var menuElements = document.getElementById("menu-items");
 	//content
 	var menuItems = document.getElementById("menu").getElementsByTagName("li");
-
+	var menuOpen=false;
 	var titleElements = document.querySelector('.title').children;
 	for (var i = 0; i <= menuItems.length-1; i++) {
 		menuItems[i].addEventListener("click", function(event){
@@ -80,6 +87,11 @@ document.addEventListener("DOMContentLoaded", function(event){
 			hideContentDivs(getDivChildren(".title"));
 			showDiv(this.dataset.class,"");
 			showDiv(this.dataset.class,"-title")
+			setTimeout(function(){
+				menuElements.style.animationName="slidedown"
+				menuOpen=false;
+			},200)
+			
 			for(var i =0; i<=titleElements.length-1;i++){
 				if(titleElements[i].dataset.class==this.dataset.class){
 					titleElements[i].style.display="block";	
@@ -129,9 +141,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 	//menu//
 	var menuButton = document.getElementById("menu-button");
-	var menuOpen=false;
 	menuButton.addEventListener("click", function(event){
-		var menuElements = document.getElementById(this.dataset.show)
 		if(menuOpen==false){
 			menuElements.style.animationName="slideup"
 			menuOpen=true;
