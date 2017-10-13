@@ -28,7 +28,12 @@ var showDiv = function(divId,ending){
 	if(window.innerWidth<780){
 		document.getElementById(divId+ending).style.display="block"
 	}else {
-		document.getElementById(divId+ending).style.display="flex"
+		if(divId=="about"){
+			document.getElementById(divId+ending).style.display="block"
+		}else{
+			document.getElementById(divId+ending).style.display="flex"
+		}
+		
 	}
 	
 	if(ending=="-title"){
@@ -66,8 +71,8 @@ for (var i =0;i<=polygons.length-1;i++){
 
 hideContentDivs(getChildrenById(".content"));
 hideContentDivs(getDivChildren(".title"));
-showDiv("contact","")
-showDiv("contact","-title")
+showDiv("about","")
+showDiv("about","-title")
 
 
 document.addEventListener("DOMContentLoaded", function(event){

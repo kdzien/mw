@@ -33,8 +33,10 @@ body {
     width: 70%; }
   #container .full-width {
     width: 100%; }
+    #container #about{
+    width:40%; }
   #container #about > div {
-    font-size:17px;
+    font-size:15px;
     display: inline; }
   #container #projects .project-container {
     width: 25%;
@@ -157,14 +159,24 @@ form {
   transform: translateY(-50%); }
   #cntc-info div {
     margin-bottom: 5px; }
-
+#contactico{
+    margin:20px 20px;
+}
+#contactico a{
+  margin-left:40px;
+  padding:5px;
+}
 #contactico a i {
-  font-size: 40px;
-  margin-left: 10px;
-  color: orange;
-  transition: 0.5s; }
-  #contactico a i:hover {
-    transform: scale(1.5); }
+
+  font-size: 20px;
+  color: white;}
+#contactico a:first-child{
+  margin-left:0px;
+}
+#contactico a i:hover {
+  color:#64B5F6;
+}
+}
 
 /*polygon boxes
 /*# sourceMappingURL=style.css.map */
@@ -277,6 +289,9 @@ form {
 #cntc-info{
   position:initial;
   transform:none;
+}
+#container #about{
+  width:80%;
 }
 
 #technologies{
@@ -422,7 +437,6 @@ form {
   display: none; }
 
 #circle-of-death {
-  display: none;
   width: 20px;
   height: 20px;
   margin: 0 auto;
@@ -450,8 +464,15 @@ transition: border 1s;
 }
 
 #tech-title{
+  margin-top:20px;
+  font-size:17px;
+  letter-spacing:1px;
 }
 
+#about-photo img{
+  border-radius:50%;
+  width:180px;
+}
 
 body::-webkit-scrollbar {
     width: 1em;

@@ -16,7 +16,7 @@
 <div id="welcome">
 	<div id="welcome-desc">
 		<div id="welcome-name"><span>KONRAD</span>DZIEŃ</div>
-		<div id="welcome-title">Junior front-end developer</div>
+		<div id="welcome-title">Junior Front-end Developer</div>
 	</div>
 	<i id="showContent" class="material-icons">chevron_right</i>
 </div>
@@ -24,14 +24,28 @@
 	<div class="title">
 		<div id="about-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">O_MNIE</span></div>
 		<div id="projects-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">MOJE_PROJEKTY</span></div>
-		<div id="technologies-title" class="title-animation"><span class="tools-style-font">#</span><span class="tech-style-font">TECHNOLOGIE</span>&nbsp;|&nbsp;<span class="tools-style-font">NARZEDZIA</span></div>
+		<div id="technologies-title" class="title-animation"><span class="tools-style-font">#</span><span class="tech-style-font">TECH</span>/<span class="tools-style-font">TOOLS</span></div>
 		<div id="contact-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">KONTAKT</span></div>
 	</div>
 	<div id="container">
 		<!--o mnie-->
 		<div class="content" id="about">
-			<div class=" long" style="margin:0 auto">
-				<strong>Obecnie jestem studentem 3-go roku Informatyki na Politechnice Wrocławskiej.</strong><br> Moja przygoda z tworzeniem stron zaczęła się rok temu przy okazji projektu zespołowego na uczelni. Przy tym projekcie zdecydowałem, że chcę się tym zajmować zawodowo. Cały czas się rozwijam, wykorzystując zdobytą wiedzę i ucząc się nowych technologii. Na koncie mam kilka własnych projektów przedstawionych poniżej.
+			<div style="display:block" id="about-photo">
+				<img src="images/me.jpg"/>
+			</div>
+				<div style="display:block;border-bottom: solid 0.5px #64B5F6;padding-bottom: 10px;">
+					<div style="display:block;margin-top:20px;font-size:35px;font-weight:bold;letter-spacing:2px;">KONRAD DZIEŃ</div>
+					<div style="margin-top:15px"><span style="color:orange">#</span>student <span style="color:orange">#</span>web-dev <span style="color:orange">#</span>muzyk</div>
+				</div>
+			<div style="display:block" >
+				<p> Moja przygoda z tworzeniem stron zaczęła się rok temu przy okazji projektu zespołowego na uczelni. Przy tym projekcie zdecydowałem, że chcę się tym zajmować zawodowo. Cały czas się rozwijam, wykorzystując zdobytą wiedzę i ucząc się nowych technologii. Na koncie mam kilka własnych projektów przedstawionych poniżej.</p>
+			</div>
+			<div style="display:block;margin-top:50px">
+				<span id="contactico">
+					<a href="https://www.facebook.com/dzieniu"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://pl.linkedin.com/in/dzienkonrad"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="https://www.github.com/kdzien"><i class="fa fa-github" aria-hidden="true"></i></a>
+				</span>
 			</div>
 		</div>
 		<!--projekty-->
@@ -82,7 +96,7 @@
 		<!--technologie-->
 		<div class="content" id="technologies">
 			<div class="center full">
-<div class="container-flex">
+<div class="container-flex" style="display:inline-block">
 	<div class="row3">
 		<div class="hex" data-tech="HTML">	
 			<img class="img-cover" src="images/technologies/html.png" />	
@@ -143,6 +157,7 @@
 </div>
 <div id="tech-title">&nbsp;</div>
 			</div>
+			
 		</div>
 		<!--contact-->
 		<div class="content" id="contact">
@@ -152,28 +167,22 @@
 					<div style="font-size:20px">Konrad Dzień</div>
 					<div ><i class="material-icons">mail_outline</i><span class="same-line" >dzien.konrad@gmail.com</span></div>
 					<div ><i class="material-icons">phone</i><span class="same-line" >533 830 555</span></div>
-					<div >
-						<span id="contactico">
-							<a href="https://pl.linkedin.com/in/dzienkonrad"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-							<a href="https://www.facebook.com/dzieniu"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-							<a href="https://www.github.com/Dzieniu"><i class="fa fa-github" aria-hidden="true"></i></a>
-						</span>
-					</div>
+					
 				</div>
 			</div>
 			<div class="right long separate">
-				<form>
+				<form style="opacity:0.4">
 					<label>Imię</label>
 					<input  placeholder="od 3 do 25 znaków" required></input>
 
 					<label>Twój e-mail</label>
 					<input type="email" required></input>
-					<div id="wrong-prompt">elo</div>
 					<label>Wiadomość</label>
 					<textarea rows="4" cols="50" maxlength="500" placeholder="min. 50 znaków" required></textarea>
-								
+					
+					<button onclick="formValidation()">Wyślij</button>	
 				</form>
-				<button onclick="formValidation()">Wyślij</button>	
+				<div id="circle-of-death"></div>
 			</div>
 
 		</div>
