@@ -131,6 +131,9 @@ document.addEventListener("DOMContentLoaded", function(event){
 	var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 	var nameRegExp=/^[a-zA-Z]{3,25}$/
 	var textRegExp=/^[a-zA-Z]{50,}$/
+	var formButton = document.getElementById("formsButton");
+	formButton.disabled=true;
+
 
 
 	formValidation = function(){
@@ -138,25 +141,32 @@ document.addEventListener("DOMContentLoaded", function(event){
 		var name = checkInput(nameInput,nameRegExp);
 		var message = checkInput(messageInput,textRegExp);
 		if(message==true && email==true && name==true){
-			sendEmail(nameInput.value,messageInput.value,emailInput.value)
-		}else{	}
+			console.log("xd")
+			//sendEmail(nameInput.value,messageInput.value,emailInput.value)
+			formButton.disabled=false;
+		}else{
+			formButton.disabled=true;
+			}
 	}
 	//formValidatonStyle
 	var formElements = [
 	{name:emailInput,regxp:emailRegExp},{name:nameInput,regxp:nameRegExp},{name:messageInput,regxp:textRegExp}
 	]
 	
-	nameInput.addEventListener("focusout", function(event){
+	nameInput.addEventListener("change", function(event){
+		formValidation();
 		if(this.value==""){nameInput.classList.remove("wrong","correct")}
 		else if(nameRegExp.test(this.value)==true){
 			nameInput.classList.remove("wrong");
 			nameInput.classList.add("correct");
 		}else {
 			nameInput.classList.remove("correct");
+
 			nameInput.classList.add("wrong");
 		}
 	})
-	emailInput.addEventListener("focusout", function(event){
+	emailInput.addEventListener("change", function(event){
+		formValidation();
 		if(this.value==""){emailInput.classList.remove("wrong","correct")}
 		else if(emailRegExp.test(this.value)==true){
 			emailInput.classList.remove("wrong");
@@ -166,7 +176,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 			emailInput.classList.add("wrong");
 		}
 	})
-	messageInput.addEventListener("focusout", function(event){
+	messageInput.addEventListener("change", function(event){
+		formValidation();
 		if(this.value==""){messageInput.classList.remove("wrong","correct")}
 		else if(textRegExp.test(this.value)==true){
 			messageInput.classList.remove("wrong");
@@ -190,6 +201,38 @@ document.addEventListener("DOMContentLoaded", function(event){
 			menuOpen=false;
 		}
 	})
+
+circle=document.getElementById("circle-of-death");
+returnMessage=document.getElementById("returnMessage");
+returnMessage.style.display="none"
+sendEmail = function(nm,text,email){
+	circle.style.display="block";
+
+
+	emailjs.send("gmail","template_3WfbauCe",{name: nameInput, notes: messageInput+emailInput})
+	.then(function(response) {
+		nameInput.value="";
+		messageInput.value="";
+		emailInput.value="";
+		nameInput.classList.remove("correct","wrong");
+		messageInput.classList.remove("correct","wrong");
+		emailInput.classList.remove("correct","wrong");
+		circle.style.display="none";
+		returnMessage.style.color="#45db00";
+		returnMessage.style.display="block"
+		returnMessage.innerHTML="Wiadomość została wysłana";
+
+	}, function(err) {
+		returnMessage.style.color="#db0000";
+		returnMessage.style.display="block"
+		returnMessage.innerHTML="Wysłanie wiadomości nie powiodło się. Spróbuj później";
+	});	
+	setTimeout(function(){
+		returnMessage.style.display="none"
+	},5000)
+
+	return false;
+}
 })
 
 var showContent = document.getElementById("showContent");
@@ -197,6 +240,8 @@ var welcome_title = document.getElementById("welcome-title")
 showContent.addEventListener("click", function(event){
 	var welcomeDiv=document.getElementById("welcome")
 	welcomeDiv.style.animation="hideLeft 1.5s cubic-bezier(0.94, 0.04, 0, 1.26) forwards"
+	var main = document.getElementById("main");
+	main.style.display="block"; 
 })
 setTimeout(function(){
 	showContent.style.opacity="1"
@@ -205,11 +250,4 @@ setTimeout(function(){
 	//menu//
 
 // EMAIL send - work, wait for rest  
-sendEmail = function(nm,text,email){
-emailjs.send("gmail","template_3WfbauCe",{name: nm, notes: text+email})
-.then(function(response) {
-   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-}, function(err) {
-   console.log("FAILED. error=", err);
-});	
-}
+

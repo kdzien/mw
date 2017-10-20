@@ -34,17 +34,17 @@
 				<img src="images/me.png"/>
 			</div>
 				<div style="display:block;border-bottom: solid 0.5px #64B5F6;padding-bottom: 10px;">
-					<div style="display:block;margin-top:20px;font-size:35px;font-weight:bold;letter-spacing:2px;">KONRAD DZIEŃ</div>
+					<div style="display:block;margin-top:20px;font-size:30px;font-weight:bold;letter-spacing:2px;">KONRAD DZIEŃ</div>
 					<div style="margin-top:15px"><span style="color:orange">#</span>working <span style="color:orange">#</span>web-dev <span style="color:orange">#</span>student</div>
 				</div>
 			<div style="display:block" >
-				<p> Tworzeniem stron/aplikacji internetowych zajmuje się od roku. Pierwszym projektem, była aplikacja EatWithMe - był to projekt na studia. Zajmowałem się tam front-end'em. Obecnie bardziej skłaniam się ku tworzeniu warstwy prezentacyjnej aplikacji, aczkolwiek uczę się też tworzenia backendu w NodeJS. Na koncie mam kilka własnych projektów przedstawionych w dziale "projekty". Obecnie jestem również na ostatnim semestrze Informatyki na Politechnice Wrocławskiej. </p>
+				<p> Tworzeniem stron/aplikacji internetowych zajmuje się od roku. Pierwszym projektem, była aplikacja EatWithMe - projekt studencki. Zajmowałem się tam front-end'em. Obecnie bardziej skłaniam się ku tworzeniu warstwy prezentacyjnej aplikacji, aczkolwiek uczę się też tworzenia backendu w NodeJS. Na koncie mam kilka własnych projektów przedstawionych w dziale "projekty". Obecnie jestem również na ostatnim semestrze Informatyki na Politechnice Wrocławskiej. </p>
 			</div>
 			<div style="display:block;margin-top:50px">
 				<span id="contactico">
-					<a href="https://www.facebook.com/dzieniu"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-					<a href="https://pl.linkedin.com/in/dzienkonrad"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-					<a href="https://www.github.com/kdzien"><i class="fa fa-github" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/dzieniu" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="https://pl.linkedin.com/in/dzienkonrad" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+					<a href="https://www.github.com/kdzien" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
 				</span>
 			</div>
 		</div>
@@ -176,9 +176,10 @@
 					<label>Wiadomość</label>
 					<textarea rows="4" cols="50" maxlength="500" placeholder="min. 50 znaków" required></textarea>
 					
-					<button onclick="formValidation()">Wyślij</button>	
+					<button id="formsButton" type="button" onclick="return sendEmail()">Wyślij</button>	
+					<div id="returnMessage"></div>
 				</form>
-				<div id="circle-of-death"></div>
+				<div id="circle-of-death" ></div>
 			</div>
 		</div>
 

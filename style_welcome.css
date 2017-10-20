@@ -1,7 +1,7 @@
 #main{
+	display:none;
 }
 #welcome {
-	display:none;
 	font-family: 'Lato', sans-serif;
 	background:url("images/background.png");
 	background-size:100% 100%;
@@ -16,7 +16,7 @@
 	width:100%;
 	height:100%;
 }
-.welcome-desc{
+#welcome-desc{
 	text-align:center;
 	position:absolute;
 	top:50%;

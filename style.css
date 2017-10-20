@@ -146,13 +146,22 @@ form {
     border:none;
     width: 50%;
     margin: 0 auto;
+    margin-bottom:10px;
     padding: 10px;
     background: none;
     color: white;
-    transition: 0.4s; }
-    form button:hover {
-      background: rgba(0, 0, 0, 0.5);
+    transition: 0.4s;
+    background: rgba(0, 0, 0, 0.5);
       cursor: pointer; }
+    form button:disabled{
+      background:none;
+    }
+    form button:disabled:hover{
+      cursor:not-allowed;
+      background:none;
+    }
+    form button:hover {
+       }
     form button:focus {
       outline: none !important; }
 #contact{
@@ -295,7 +304,7 @@ form {
 @media screen and (max-width: 1300px) {
 
 #container #projects .project-container{
-  height:40% !important;
+  height:300px !important;
 }
 #contact{
   display:block;
@@ -338,13 +347,14 @@ form{
 
 
   #menu {
+    background-color:#1c252a;
     width: 100%; 
     font-size:19px;
     bottom:0px;
     }
     #menu i{
       padding:4px;
-      color:#FFC107;
+      color:orange;
     }
     #menu #menu-items {
       margin: 0;
@@ -357,7 +367,6 @@ form{
       display: none; }
       #menu ul li {
         opacity:1;
-        background-color: rgba(0,0,0,0.6);
         margin: 0px;
         margin-bottom: 1px;
         padding: 5px 0px 5px 0px;
@@ -381,7 +390,7 @@ form{
 }
 .title{
   position:absolute;
-  width:220px;
+  width:240px;
 }
   #container #projects .project-container {
     width: 100%;
@@ -393,7 +402,9 @@ form{
     .card-margin{
 
     }
-
+#returnMessage{
+  color:#45db00;
+}
 @keyframes slideLeft{
   from{
     width:19px;
@@ -462,6 +473,7 @@ form{
   display: none; }
 
 #circle-of-death {
+      margin-top: 10px;
   display:none;
   width: 20px;
   height: 20px;
