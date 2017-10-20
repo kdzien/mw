@@ -461,10 +461,10 @@ form{
   margin-left: 15px; }
 
 .correct {
-  border: solid 1px #45db00; }
+  border: solid 1px #45db00 !important; }
 
 .wrong {
-  border: solid 1px #db0000; }
+  border: solid 1px #db0000 !important; }
 
 .center {
   margin: 0 auto; }

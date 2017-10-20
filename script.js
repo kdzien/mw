@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 	{name:emailInput,regxp:emailRegExp},{name:nameInput,regxp:nameRegExp},{name:messageInput,regxp:textRegExp}
 	]
 	
-	nameInput.addEventListener("change", function(event){
+	nameInput.addEventListener('input', function(event){
 		formValidation();
 		if(this.value==""){nameInput.classList.remove("wrong","correct")}
 		else if(nameRegExp.test(this.value)==true){
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 			nameInput.classList.add("wrong");
 		}
 	})
-	emailInput.addEventListener("change", function(event){
+	emailInput.addEventListener("input", function(event){
 		formValidation();
 		if(this.value==""){emailInput.classList.remove("wrong","correct")}
 		else if(emailRegExp.test(this.value)==true){
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 			emailInput.classList.add("wrong");
 		}
 	})
-	messageInput.addEventListener("change", function(event){
+	messageInput.addEventListener("input", function(event){
 		formValidation();
 		if(this.value==""){messageInput.classList.remove("wrong","correct")}
 		else if(textRegExp.test(this.value)==true){
