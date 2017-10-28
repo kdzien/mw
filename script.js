@@ -69,8 +69,6 @@ for (var i =0;i<=polygons.length-1;i++){
 //
 //trzeba dac w stylu display:none a nie przez jsa
 
-hideContentDivs(getChildrenById(".content"));
-hideContentDivs(getDivChildren(".title"));
 showDiv("about","")
 showDiv("about","-title")
 
@@ -130,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 	var messageInput=form[2];
 	var emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 	var nameRegExp=/^[a-zA-Z]{3,25}$/
-	var textRegExp=/^[a-zA-Z]{50,}$/
+	var textRegExp=/^.{50,}$/
 	var formButton = document.getElementById("formsButton");
 	formButton.disabled=true;
 
@@ -209,7 +207,7 @@ sendEmail = function(nm,text,email){
 	circle.style.display="block";
 
 
-	emailjs.send("gmail","template_3WfbauCe",{name: nameInput, notes: messageInput+emailInput})
+	emailjs.send("gmail","template_3WfbauCe",{name: nameInput.value, notes: messageInput.value+emailInput.value})
 	.then(function(response) {
 		nameInput.value="";
 		messageInput.value="";

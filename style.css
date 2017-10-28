@@ -121,7 +121,6 @@ body {
   color:orange;
 }
 form {
-  border-left:solid 1px gray;
   border-top:none;
   margin: 0 auto; }
   form > * {
@@ -320,8 +319,6 @@ form {
   text-align:center;
 }
 form{
-  border-left:none;
-  border-top:solid 1px gray;
   padding-top:15px;
 }
 #container #about{

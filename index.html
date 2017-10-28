@@ -3,29 +3,32 @@
 <title>Konrad Dzień</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="style_welcome.css">
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet">
+
 <script src="https://use.fontawesome.com/22ab09c0fb.js"></script>
 </head>
 
 <body>
 <div id="welcome">
 	<div id="welcome-desc">
-		<div id="welcome-name"><span>KONRAD</span>DZIEŃ</div>
-		<div id="welcome-title">Junior Front-end Developer</div>
+		<div id="welcome-name">KONRAD<span>&nbsp;DZIEŃ</span></div>
+		<div id="welcome-title">Junior <span>Front-end</span> Developer</div>
 	</div>
 	<i id="showContent" class="material-icons">chevron_right</i>
 </div>
 	<div id="main">
 	<div class="title">
 		<div id="about-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">O_MNIE</span></div>
-		<div id="projects-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">MOJE_PROJEKTY</span></div>
-		<div id="technologies-title" class="title-animation"><span class="tools-style-font">#</span><span class="tech-style-font">TECH</span>/<span class="tools-style-font">TOOLS</span></div>
-		<div id="contact-title" class="title-animation"><span class="tech-style-font">#</span><span class="tools-style-font">KONTAKT</span></div>
+		<div id="projects-title"  class="title-animation" style="display:none"><span class="tech-style-font">#</span><span class="tools-style-font">MOJE_PROJEKTY</span></div>
+		<div id="technologies-title" class="title-animation" style="display:none"><span class="tools-style-font">#</span><span class="tech-style-font">TECH</span>/<span class="tools-style-font">TOOLS</span></div>
+		<div id="contact-title" class="title-animation" style="display:none"><span class="tech-style-font">#</span><span class="tools-style-font">KONTAKT</span></div>
 	</div>
 	<div id="container">
 		<!--o mnie-->
@@ -49,10 +52,10 @@
 			</div>
 		</div>
 		<!--projekty-->
-		<div class="content" id="projects">
+		<div class="content" id="projects" style="display:none">
 			<div class="project-container card-margin ">
 				<div class="card">
-					<figure class="front" style="background:url(images/projects/easyshopping.png) no-repeat 100%;background-size:cover"></figure>
+					<figure class="front" style="background:url(images/projects/easyshopping.jpg) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="descc">
     					<div class="project-name">Easy Shopping</div>
@@ -66,7 +69,7 @@
 			</div>
 			<div class="project-container card-margin">
 				<div class="card">
-					<figure class="front" style="background:url(images/projects/eat24.png) no-repeat 100%;background-size:cover"></figure>
+					<figure class="front" style="background:url(images/projects/eat24.jpg) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="descc">
     					<div class="project-name">Eat With Me</div>
@@ -80,7 +83,7 @@
 			</div>
 			<div class="project-container card-margin">
 				<div class="card">
-					<figure class="front" style="background:url(images/projects/hangmeout.png) no-repeat 100%;background-size:cover"></figure>
+					<figure class="front" style="background:url(images/projects/hangmeout.jpg) no-repeat 100%;background-size:cover"></figure>
     				<figure class="back">
     					<div class="descc">
     					<div class="project-name">HangMeOut</div>
@@ -94,7 +97,7 @@
 			</div>
 		</div>
 		<!--technologie-->
-		<div class="content" id="technologies">
+		<div class="content" id="technologies" style="display:none">
 			<div class="center full">
 <div class="container-flex" style="display:inline-block">
 	<div class="row3">
@@ -160,7 +163,7 @@
 			
 		</div>
 		<!--contact-->
-		<div class="content" id="contact">
+		<div class="content" id="contact" style="display:none">
 			<div id="cntc-info">
 				<div style="font-size:20px;margin-bottom:10px">KONRAD DZIEŃ</div>
 				<div ><i class="material-icons" style="color:#64B5F6">mail_outline</i><span class="same-line" >dzien.konrad@gmail.com</span></div>
