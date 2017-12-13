@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Text+Me+One" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600" rel="stylesheet">
 
 <script src="https://use.fontawesome.com/22ab09c0fb.js"></script>
 </head>
@@ -18,10 +19,10 @@
 <body>
 <div id="welcome">
 	<div id="welcome-desc">
-		<div id="welcome-name">KONRAD<span>&nbsp;DZIEŃ</span></div>
+		<div id="welcome-name" ><span style="font-weight:200">KONRAD</span><span style="font-weight:400">&nbsp;DZIEŃ</span></div>
 		<div id="welcome-title">Junior <span>Front-end</span> Developer</div>
 	</div>
-	<i id="showContent" class="material-icons">chevron_right</i>
+	<img id="showContent" src="images/enter.png" />
 </div>
 	<div id="main">
 	<div class="title">
@@ -36,8 +37,8 @@
 			<div style="display:block" id="about-photo">
 				<img src="images/me.png"/>
 			</div>
-				<div style="display:block;border-bottom: solid 0.5px #64B5F6;padding-bottom: 10px;">
-					<div style="display:block;margin-top:20px;font-size:30px;font-weight:bold;letter-spacing:2px;">KONRAD DZIEŃ</div>
+				<div style="display:block;    border-bottom: solid 0.5px #ffffff4a;;padding-bottom: 10px;">
+					<div style="display:block;margin-top:20px;font-size:30px;font-weight:300;letter-spacing:2px;">KONRAD DZIEŃ</div>
 					<div style="margin-top:15px"><span style="color:orange">#</span>working <span style="color:orange">#</span>web-dev <span style="color:orange">#</span>student</div>
 				</div>
 			<div style="display:block" >
@@ -156,6 +157,18 @@
 			<div class="corner-2"></div>		
 		</div>
 	</div>
+	<div class="row0">
+		<div class="hex  near-margin" data-tech="NodeJS">	
+			<img class="img-cover" src="images/technologies/nodejs.png" />	
+			<div class="corner-1"></div>
+			<div class="corner-2"></div>		
+		</div>
+		<div class="hex tools-style near-margin" data-tech="Gulp">
+			<img class="img-cover" src="images/technologies/gulp.png" />
+			<div class="corner-1"></div>
+			<div class="corner-2"></div>		
+		</div>
+	</div>
 
 </div>
 <div id="tech-title">&nbsp;</div>
@@ -163,28 +176,32 @@
 			
 		</div>
 		<!--contact-->
-		<div class="content" id="contact" style="display:none">
-			<div id="cntc-info">
-				<div style="font-size:20px;margin-bottom:10px">KONRAD DZIEŃ</div>
-				<div ><i class="material-icons" style="color:#64B5F6">mail_outline</i><span class="same-line" >dzien.konrad@gmail.com</span></div>
-				<div ><i class="material-icons" style="color:#64B5F6">phone</i><span class="same-line" >533 830 555</span></div>
-			</div>
-			<div >
-				<form >
-					<label>Imię</label>
-					<input  placeholder="od 3 do 25 znaków" required></input>
+<div class="content" id="contact" style="display:none">
+	<!-- 			<div id="cntc-info">
+		<div style="font-size:20px;margin-bottom:10px">KONRAD DZIEŃ</div>
+		<div ><i class="material-icons" style="color:#64B5F6">mail_outline</i><span class="same-line" >dzien.konrad@gmail.com</span></div>
+		<div ><i class="material-icons" style="color:#64B5F6">phone</i><span class="same-line" >533 830 555</span></div>
+	</div> -->
+	
+		
+	<div>
+		<div id="contact-titlein">Formularz kontaktowy</div>
+		<div id="contact-description">Masz pytanie? Wyślij wiadomość poprzez formularz kontaktowy, odpowiem tak szybko, jak to możliwe.</div>
+		<form>
+			<label>Imię *</label>
+			<input  placeholder="od 3 do 25 znaków" required></input>
 
-					<label>Twój e-mail</label>
-					<input type="email" required></input>
-					<label>Wiadomość</label>
-					<textarea rows="4" cols="50" maxlength="500" placeholder="min. 50 znaków" required></textarea>
-					
-					<button id="formsButton" type="button" onclick="return sendEmail()">Wyślij</button>	
-					<div id="returnMessage"></div>
-				</form>
-				<div id="circle-of-death" ></div>
-			</div>
-		</div>
+			<label>Twój e-mail *</label>
+			<input type="email" required></input>
+			<label>Wiadomość *</label>
+			<textarea rows="4" cols="50" maxlength="500" placeholder="min. 50 znaków" required></textarea>
+			
+			<button id="formsButton" type="button" onclick="return sendEmail()">Wyślij</button>	
+			<div id="returnMessage"></div>
+		</form>
+		<div id="circle-of-death" ></div>
+	</div>
+</div>
 
 </div>
 	<!--menu-->

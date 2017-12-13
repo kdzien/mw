@@ -1,10 +1,17 @@
 body {
   margin: 0 auto;
   padding: 90px 0px 90px 0px;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background2.jpg) no-repeat;
-  background-size: 100% 100%;
+/*  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background2.jpg) no-repeat;
+  background-size: 100% 100%;*/
+background: #141E30;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+  
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight:200;
    }
 
 #container {
@@ -118,9 +125,11 @@ body {
     display: none; }
 .menu-opacity{
   opacity:1 !important;
-  color:orange;
+  color:#FFC107;
 }
 form {
+    font-family: 'Poppins', sans-serif;
+  font-weight:200;
   border-top:none;
   margin: 0 auto; }
   form > * {
@@ -129,7 +138,7 @@ form {
   form input {
     text-align: center; }
   form input, form textarea {
-    width: 90%;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
@@ -151,7 +160,10 @@ form {
     color: white;
     transition: 0.4s;
     background: rgba(0, 0, 0, 0.5);
-      cursor: pointer; }
+      cursor: pointer; 
+      font-family: 'Poppins', sans-serif;
+  font-weight:200;
+font-size:17px;}
     form button:disabled{
       background:none;
     }
@@ -163,10 +175,23 @@ form {
        }
     form button:focus {
       outline: none !important; }
-#contact{
+#contact {
+
 }
+#contact-titlein{
+  font-size:40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight:200;
+}
+#contact-description{
+  font-family: 'Poppins', sans-serif;
+  font-weight:200;
+  margin-bottom:30px;
+}
+
 #contact > div{
-  width:50%;
+  width:60%;
+  margin: 0 auto;
 }
 #cntc-info{
   margin:0 auto;
@@ -263,6 +288,13 @@ form {
   margin-left: 40px; }
   .row1 > .hex {
     background-color: #ffdb6d; }
+.row0{
+  margin-left:80px;
+}
+.row0 > .hex{
+  background-color: #64B5F6 !important;
+}
+
 
 .near-margin {
   margin-top: 5px; }
@@ -336,6 +368,9 @@ form{
 }
 .row2{
   margin-left:10px;
+}
+.row0{
+  margin-left:70px;
 }
 .hex{
     width: 50px;
