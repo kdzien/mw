@@ -337,6 +337,9 @@ font-size:17px;}
 #container #projects .project-container{
   height:300px !important;
 }
+#project{
+  display:block !important;
+}
 #contact{
   display:block;
 }
