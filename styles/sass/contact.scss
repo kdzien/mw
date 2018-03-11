@@ -1,0 +1,14 @@
+#contact{
+    #social-links{
+        margin:0 auto;
+        img{
+            width:200px;
+            filter: grayscale(100%);
+            margin:20px;
+            &:hover{
+                cursor:pointer;
+                filter: grayscale(0%);
+            }
+        }
+    }
+}

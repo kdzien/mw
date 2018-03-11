@@ -1,0 +1,11 @@
+$(function(){
+    $("#welcome").delay(2000).slideUp(1100);
+    $("#menu-items").find("li:first-child").css({"color":"#f6fb1d","opacity":"1"})
+    $("#menu-items").find("li").click(function(){
+        $(".title").html($(this).data("title"))
+        $(".content").hide()
+        $(`#${$(this).data("class")}`).show()
+        $(this).parent().find("li").css({"color":"white","opacity":"0.7"})
+        $(this).css({"color":"#f6fb1d","opacity":"1"})
+    })
+})
