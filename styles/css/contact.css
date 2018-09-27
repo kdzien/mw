@@ -1,9 +1,0 @@
-#contact #social-links {
-  margin: 0 auto; }
-  #contact #social-links img {
-    width: 200px;
-    filter: grayscale(100%);
-    margin: 20px; }
-    #contact #social-links img:hover {
-      cursor: pointer;
-      filter: grayscale(0%); }

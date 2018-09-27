@@ -1,120 +1,219 @@
+<!doctype html>
 <html>
-<head>
-	<title>Marskość wątroby</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="shortcut icon" type="image/png" href="images/favicon.ico"/>
-	<link rel="stylesheet" href="./styles/dist/style.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
-</head>
+  <head>
+    <title>Marskosc watroby - strona zespołu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet">
+  </head>
+  <body style="display:none">
+    <header id="home">
+      <nav class="container">
+        <img />
+        <ul>
+            <a target="_blank" href="https://www.facebook.com/marskoscwatroby/"><li><i class="fab fa-facebook"></i></li></a>
+            <a target="_blank" href="https://www.instagram.com/andrzejkozioll/"><li><i class="fab fa-instagram"></i></li></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCvSL2WFTrkGJ7K166k_Ktrg"><li><i class="fab fa-youtube"></i></li></a>
+            <a target="_blank" href="https://soundcloud.com/marskoscwatroby"><li><i class="fab fa-soundcloud"></i></li></a>
+        </ul>
+      </nav>
+      <div id="welcome">
+        <h1>MARSKOŚĆ WĄTROBY</h1>
+        <p>ZAPRASZAMY</p>
+      </div>
+    </header>
+    <i class="fas fa-bars menu-button open"></i>
+    <nav id="menu">
+      <i class="fas fa-minus menu-button closeb"></i>
+      <ul>
+          <li data-scroll="home">STRONA GŁÓWNA</li>
+          <li data-scroll="team">ZESPÓŁ</li>
+          <li data-scroll="biography">BIOGRAFIA</li>
+          <li data-scroll="concerts">KONCERTY</li>
+          <li data-scroll="videos">NAJNOWSZY KLIP</li>
+          <li data-scroll="social">SOCIAL</li>
+          <li data-scroll="contact">KONTAKT</li>
+        </ul>
+    </nav>
 
-<body>
-<div id="welcome">
-	<img src="images/logo.png"/>
-</div>
-<div id="main">
-<div class="title">
-	O NAS
-</div>
-	<div id="container">
-		<!--about -->
-		<div class="content" id="about">
-				Zespół założony, a właściwie wymyślony w 2014 roku przez Piotrka i Kamila podczas picia piwa na terenie stacji energetycznej Jarosław Północ. Na początku 2015 roku do składu dołączył Samiec (gitara, wokal) oraz Mieszał (gitara solowa). W przydomowej piwnicy powstały pierwsze utwory zespołu, które ujrzały światło dzienne za sprawą dołączenia do kapeli perkusisty Andrzeja. Zespół największy rozgłos zyskał za sprawą debiutanckiego utworu "Emigrant". Melodyjny punk rock z charakterystycznymi, dobitnymi i bezkompromisowymi tekstami. Jesteśmy z Polski, mówimy po polsku, a zatem tworzymy i śpiewamy WYŁĄCZNIE w tym języku.
-		</div>
-		<!--projekty -->
-		<div class="content" id="projects" style="display:none">
-			<div class="project-container card-margin ">
-				<div class="card">
-					<figure class="front" style="background:url(images/koziol.jpg) no-repeat 100%;background-size:cover"></figure>
-					<figure class="back">
-						<div class="descc">
-							<div class="name">Kozioł</div>
-							<div class="description">Perkusja</div>
-						</div>
-					</figure>
-				</div>
-			</div>
-			<div class="project-container card-margin ">
-				<div class="card">
-					<figure class="front" style="background:url(images/mieszal.jpg) no-repeat 100%;background-size:cover"></figure>
-					<figure class="back">
-						<div class="descc">
-							<div class="name">Mieszał</div>
-							<div class="description">Gitara elektryczna</div>
-						</div>
-					</figure>
-				</div>
-			</div>
-			<div class="project-container card-margin ">
-				<div class="card">
-					<figure class="front" style="background:url(images/piotrek.jpg) no-repeat 100%;background-size:cover"></figure>
-					<figure class="back">
-						<div class="descc">
-							<div class="name">Piotrek</div>
-							<div class="description">Gitara basowa</div>
-						</div>
-					</figure>
-				</div>
-			</div>
-			<div class="project-container card-margin ">
-				<div class="card">
-					<figure class="front" style="background:url(images/samiec.jpg) no-repeat 100%;background-size:cover"></figure>
-					<figure class="back">
-						<div class="descc">
-							<div class="name">Samek</div>
-							<div class="description">Wokal</div>
-						</div>
-					</figure>
-				</div>
-			</div>
-		</div>
-		<!--technologie -->
-		<div class="content" id="concerts" style="display:none">
-			<div class="center full">
-				<div class="concert">
-					<div class="data">20.03.2017</div>
-					<div class="place">Klub stodoła</div>
-					<div class="city">Jarosław</div>
-				</div>
-				<div class="concert">
-					<div class="data">07.04.2017</div>
-					<div class="place">Carmel club</div>
-					<div class="city">Rzeszów</div>
-				</div>
-			</div>
-		</div>
-		<!--kontakt -->
-		<div class="content" id="contact" style="display:none">
-			<div id="social-links">
-				<a href="https://www.facebook.com/marskoscwatroby" target="_blank"><img src="images/facebook.png"/></a>
-				<a href="https://www.youtube.com/channel/UCvSL2WFTrkGJ7K166k_Ktrg" target="_blank"><img src="images/youtube.png"/></a>
-				
-				
-			</div>
-		</div>
-	</div>
-	<div id="menu">
-		<ul id="menu-items">
-			<li data-class="about" data-title="O NAS">o nas</li>
-			<li data-class="projects" data-title="SKŁAD ZESPOŁU">skład zespołu</li>
-			<li data-class="concerts" data-title="KONCERTY"> koncerty</li>
-			<li data-class="contact" data-title="SOCIAL">social</li>
-		</ul>
-		<i class="material-icons" id="menu-button" >view_headline</i>
-	</div>
-</div>
+    <main>
 
-</body>
-<!--EmailJS -->
-<script src="https://use.fontawesome.com/22ab09c0fb.js"></script>
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init("user_mEsxZor7yxoIoF2kJ0dT8");
-   })();
-</script>
-<!--/EmailJS -->
-<script src="/scripts/menu.js"></script>
-<script src="/scripts/card_flip.js"></script>
-</html>
+      <section id="team">
+        <div class="container-fluid">
+          <div class=" band">
+                <div class="artist-item">
+                  <!-- <img src="images/koziol.jpg" /> -->
+                  <div class="artist">
+                    <div class="artist-info">
+                      <div class="artist-name">ANDRZEJ KOZIOŁ</div>
+                      <div class="artist-role">perkusja</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="artist-item">
+                  <!-- <img src="images/mieszal.jpg" /> -->
+                  <div class="artist">
+                    <div class="artist-info">
+                      <div class="artist-name">MICHAŁ KIEŁBOWICZ</div>
+                      <div class="artist-role">gitara basowa</div>
+                    </div>
+                  </div></div>
+                <div class="artist-item">
+                  <!-- <img src="images/samek.jpg" /> -->
+                  <div class="artist">
+                    <div class="artist-info">
+                      <div class="artist-name">DAMIAN SAMEK</div>
+                      <div class="artist-role">wokal/gitara elektryczna</div>
+                    </div>
+                  </div></div>
+                <div class="artist-item">
+                  <!-- <img src="images/tkacz.jpg" /> -->
+                  <div class="artist">
+                    <div class="artist-info">
+                      <div class="artist-name">PIOTR TKACZ</div>
+                      <div class="artist-role">gitara elektryczna</div>
+                    </div>
+                  </div></div>
+            </div>
+        </div>
+      </section>
+      <section id="biography">
+        <div class="section-header">
+          <h1>BIOGRAFIA</h1>
+        </div>
+        <div class="container">
+          <div class="row">
+
+              <div class="col-md-8 offset-md-2 description">
+                  <p>
+                      Sed malesuada tincidunt neque. Phasellus eu felis tellus. Praesent sed sem ut tellus varius tempor eu in leo. Nulla varius auctor ex elementum accumsan. Nunc quis sem quis est pretium pellentesque. Vivamus placerat eleifend diam, ut congue lacus dignissim vel. Duis porta orci nec fringilla ornare. Nulla ex est, iaculis in erat ut, finibus accumsan nunc. Aliquam viverra viverra lectus et accumsan. Sed sit amet sapien nisl. Nunc nec lorem convallis, vehicula erat sed, scelerisque mi. Vestibulum porttitor mauris at luctus accumsan.
+                      </p>
+                      <p>
+                      Sed quam quam, cursus consectetur leo et, pharetra molestie tortor. Phasellus id mauris mauris. Nullam turpis est, vestibulum vitae fringilla id, tristique sit amet neque. Nunc tempor, mauris et rutrum aliquam, erat enim elementum tellus, ut imperdiet urna tortor ac tortor. Donec vulputate tellus id magna pretium vehicula. Duis pellentesque et nisi non lacinia. Fusce tristique lacinia molestie. Mauris mollis metus vel libero finibus, eget viverra risus mollis.
+                      </p>
+                      <p>
+                      Pellentesque sit amet risus tristique, faucibus velit et, mattis mauris. Integer sit amet quam volutpat, vestibulum lacus quis, volutpat lectus. Fusce iaculis dui quis ex cursus sollicitudin. Aliquam iaculis tellus elit, scelerisque venenatis nisl dapibus id. Sed augue diam, tincidunt bibendum quam sed, vulputate bibendum mi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam a dignissim tellus. Quisque vitae finibus purus, at suscipit metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ac enim sit amet tellus porta imperdiet. Quisque a leo nisl.
+                      </p>              </div>
+            </div>
+        </div>
+        
+      </section>
+      <section id="concerts">
+          <div class="section-header">
+              <h1>KONCERTY</h1>
+              <p>NAJBLIŻSZE KONCERTY 2018/2019</p>
+          </div>
+          <div class="container">
+            <ul>
+              <li class="event">
+                <div class="date">
+                  <span class="day">28</span>
+                  <div>
+                    <span class="month">09</span>
+                    <span class="year">2018</span>
+                  </div>
+                </div>                  
+                <div class="place"><div><i class="fas fa-building"></i>Salvadore</div></div>
+                <div class="city"><div><i class="fas fa-map-marker"></i>Jarosław</div></div>
+                <div class="others"><a>Szczegoły</a></div>
+              </li>
+              <li class="event">
+                  <div class="date">
+                    <span class="day">28</span>
+                    <div>
+                      <span class="month">09</span>
+                      <span class="year">2018</span>
+                    </div>
+                  </div>                  
+                  <div class="place"><div><i class="fas fa-building"></i>Salvadore</div></div>
+                  <div class="city"><div><i class="fas fa-map-marker"></i>Jarosław</div></div>
+                  <div class="others"><a>Szczegoły</a></div>
+                </li>
+                <li class="event">
+                    <div class="date">
+                      <span class="day">28</span>
+                      <div>
+                        <span class="month">09</span>
+                        <span class="year">2018</span>
+                      </div>
+                    </div>                  
+                    <div class="place"><div><i class="fas fa-building"></i>Salvadore</div></div>
+                    <div class="city"><div><i class="fas fa-map-marker"></i>Jarosław</div></div>
+                    <div class="others"><a>Szczegoły</a></div>
+                  </li>
+                  <li class="event">
+                      <div class="date">
+                        <span class="day">28</span>
+                        <div>
+                          <span class="month">09</span>
+                          <span class="year">2018</span>
+                        </div>
+                      </div>                  
+                      <div class="place"><div><i class="fas fa-building"></i>Salvadore</div></div>
+                      <div class="city"><div><i class="fas fa-map-marker"></i>Jarosław</div></div>
+                      <div class="others"><a>Szczegoły</a></div>
+                    </li>
+            </ul>
+          </div>
+      </section>
+      <section id="videos">
+        <div class="section-header">
+          <h1>NAJNOWSZY KLIP</h1>
+        </div>
+        <div class="container">
+          <iframe 
+          src="">
+          </iframe>
+        </div>
+      </section>
+      <section id="social">
+        <div class="container">
+          <ul>
+            <a target="_blank" href="https://www.facebook.com/marskoscwatroby/"><li><i class="fab fa-facebook"></i></li></a>
+            <a target="_blank" href="https://www.instagram.com/andrzejkozioll/"><li><i class="fab fa-instagram"></i></li></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCvSL2WFTrkGJ7K166k_Ktrg"><li><i class="fab fa-youtube"></i></li></a>
+            <a target="_blank" href="https://soundcloud.com/marskoscwatroby"><li><i class="fab fa-soundcloud"></i></li></a>
+          </ul>
+        </div>
+      </section>
+      <footer id="contact">        
+        <div class="section-header">
+          <h1>KONTAKT</h1>
+        </div>
+          <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <div class="contact-s">
+                      <h2>PROMOCJA ZESPOŁU, MEDIA</h2>
+                      <p>Piotr Tkacz</p>
+                      <p>726 309 234</p>
+                  </div>
+                  <div class="contact-s">
+                      <h2>TECHNIKA SCENY</h2>
+                      <p>Andrzej Kozioł</p>
+                      <p>795 693 064</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <h2>FORMULARZ KONTAKTOWY</h2>
+                  <form>
+                    <label>Wprowadz temat wiadomosci</label>
+                    <input placeholder="temat" type="text" required/>
+                    <label>Twoj adres email</label>                    
+                    <input placeholder="email" type="email" required/>
+                    <label>Wiadomosc</label>
+                    <textarea placeholder="tresc" required></textarea>
+                    <button>Wyslij</button>
+                  </form>
+                </div>
+              </div>
+          </div>
+          
+        </footer>
+    </main>
+  <script src="./js/bundle.js"></script>
+  </body>
+</html> 
