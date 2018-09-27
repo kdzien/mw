@@ -281,7 +281,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "body {\n  font-family: 'Open Sans', sans-serif; }\n\n.menu-button {\n  z-index: 10;\n  border-radius: 50%;\n  position: fixed;\n  color: whitesmoke;\n  font-size: 25px;\n  padding: 15px;\n  background-color: #2c2c2c;\n  left: 30px;\n  top: 40px;\n  cursor: pointer; }\n\n#menu {\n  position: fixed;\n  z-index: 11;\n  height: 100vh;\n  left: -400px;\n  top: 0;\n  color: whitesmoke;\n  letter-spacing: 4px;\n  font-weight: 300;\n  background-color: #2c2c2c;\n  width: 400px; }\n  #menu .menu-button {\n    position: absolute; }\n    #menu .menu-button.closeb {\n      color: #ff8800;\n      background-color: #ffffff00;\n      margin-left: -2px; }\n  #menu ul {\n    padding: 0;\n    position: relative;\n    list-style-type: none;\n    top: 50%;\n    transform: translateY(-50%); }\n    #menu ul li {\n      cursor: pointer;\n      font-size: 23px;\n      text-align: center;\n      padding: 5px 0px; }\n      #menu ul li:hover {\n        color: #ff8800; }\n\n.section-header {\n  text-align: center; }\n  .section-header h1 {\n    font-family: 'Love Ya Like A Sister', cursive;\n    font-size: 40px;\n    margin-bottom: 2px; }\n  .section-header p {\n    color: #ff8800; }\n\nmain section, main footer {\n  padding: 60px 0px; }\n\nbody::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: #F5F5F5; }\n\nbody::-webkit-scrollbar {\n  width: 10px;\n  background-color: #F5F5F5; }\n\nbody::-webkit-scrollbar-thumb {\n  background-color: #2c2c2c; }\n", ""]);
+exports.push([module.i, "body {\n  font-family: 'Open Sans', sans-serif; }\n\n.menu-button {\n  z-index: 10;\n  border-radius: 50%;\n  position: fixed;\n  color: whitesmoke;\n  font-size: 25px;\n  padding: 15px;\n  background-color: #2c2c2c;\n  left: 30px;\n  top: 40px;\n  cursor: pointer; }\n\n#menu {\n  position: fixed;\n  z-index: 11;\n  height: 100vh;\n  left: -400px;\n  top: 0;\n  color: whitesmoke;\n  letter-spacing: 4px;\n  font-weight: 300;\n  background-color: #2c2c2c;\n  width: 400px; }\n  #menu .menu-button {\n    position: absolute; }\n    #menu .menu-button.closeb {\n      color: #ff8800;\n      background-color: #ffffff00;\n      margin-left: -2px; }\n  #menu ul {\n    padding: 0;\n    position: relative;\n    list-style-type: none;\n    top: 50%;\n    transform: translateY(-50%); }\n    #menu ul li {\n      cursor: pointer;\n      font-size: 23px;\n      text-align: center;\n      padding: 5px 0px; }\n      #menu ul li:hover {\n        color: #ff8800; }\n\n.section-header {\n  text-align: center; }\n  .section-header h1 {\n    font-family: 'Love Ya Like A Sister', cursive;\n    font-size: 40px;\n    margin-bottom: 2px; }\n  .section-header p {\n    color: #ff8800; }\n\nmain section, main footer {\n  padding: 60px 0px; }\n\nbody::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: #F5F5F5; }\n\nbody::-webkit-scrollbar {\n  width: 10px;\n  background-color: #F5F5F5; }\n\nbody::-webkit-scrollbar-thumb {\n  background-color: #2c2c2c; }\n\n.hide_div {\n  position: absolute;\n  top: 0;\n  left: 0;\n  background-color: black;\n  z-index: 999;\n  width: 100%;\n  height: 100%; }\n\nsection, footer {\n  position: relative; }\n", ""]);
 
 // exports
 
@@ -14248,7 +14248,22 @@ __webpack_require__(/*! jquery.scrollto */ "./node_modules/jquery.scrollto/jquer
 
 window.onload = function () {
   (0, _yt_api_request.getLastVideo)().then(function () {
-    $('body').fadeIn();
+    $('body').fadeIn(function () {
+      var section_positions = [];
+      $("section,footer").each(function (i, elem) {
+        section_positions.push({ id: $(this).attr('id'), pos: $(this)[0].offsetTop, visible: false });
+      });
+      $(window).scroll(function (e) {
+        var bottom_pos = $(this).scrollTop() + window.innerHeight - 200;
+        console.log(section_positions);
+        section_positions.forEach(function (elem) {
+          if (bottom_pos > elem.pos && !elem.visible) {
+            $('#' + elem.id).find(".hide_div").fadeOut(500);
+            elem.visible = true;
+          }
+        });
+      });
+    });
   });
 };
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -14281,7 +14296,9 @@ $('#menu').find('li').each(function () {
     is_menu_hide = !is_menu_hide;
   });
 });
+$(window).scroll(function () {});
 $('body').click(function (e) {
+
   if (is_menu_hide && e.pageX > 400) {
     $("#menu").animate({ left: "-400px" });
     is_menu_hide = !is_menu_hide;
